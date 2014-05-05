@@ -1,0 +1,46 @@
+<ion-view title="Add Insurance">
+<ion-header-bar class="bar bar-header bar-positive"> 
+ 
+ </ion-header-bar>
+
+<div class="bar bar-subheader">
+    
+          <h1 class="title">Add Insurance</h1>
+    
+           <a class="button button-clear button-primary" href="#/tab/insurance">Cancel</a>
+           <a class="button button-clear button-primary" ng-click="createInsurance()"></a>
+         
+        </div>
+<ion-content class="has-header padding" >
+ <div class="padding">
+    <div class="list">
+        <label class="item item-input">
+          <div class="input-label">Holder Name</div>
+            <input type="text" ng-model="insurance.holdername"/></label>
+        <label class="item item-input">
+          <div class="input-label">Insurance Name</div>
+            <input type="text" ng-model="insurance._name"/></label>
+        <label class="item item-input">
+           <div class="input-label">Type</div>
+            <input type="text"  ng-model="insurance.type" > </label>
+        
+        <label class="item item-input">
+              <div class="input-label">Policy ID</div>
+              <input type="text"  ng-model="insurance.policy_id" ></label>
+        
+        <label class="item item-input">
+             <div class="input-label">Group ID #</div>
+                <input type="number"  ng-model="insurance.group_id" ></label>
+        <label class="item item-input">
+                   <div class="input-label">Subscriber Name</div> <!-- Shouldnbt this be prepopulated for primary user ???-->
+                      <input type="text"  ng-model="insurance.subscriber_name" ></label>
+       <div class="item item-divider"> Relationship to Subscriber:
+        </div>
+       <ion-checkbox ng-repeat="item in relations" ng-model="item.checked" ng-change="selectRelation(item.relation)">{{ item.relation }}
+          </ion-checkbox>
+
+      </div>
+      </div>
+      </ion-content>
+      </ion-view>
+

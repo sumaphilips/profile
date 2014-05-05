@@ -1,0 +1,38 @@
+<ion-view title="Add Family Member">
+<ion-nav-buttons>
+   <a class="button button-clear button-primary" href="#/tab/addFamilyMbr">Cancel</a>
+<h1 class="title">Add Family Member</h1>
+  <a class="button button-clear button-primary" href="#/tab/addFamilyMbr">Done</a>
+</ion-nav-buttons>
+  
+ 
+<ion-content class="has-header padding" >
+<form>
+    <div class="padding">
+          <div class="list">
+              <label class="item item-input">
+                  <input type="text" placeholder="Family Member" ng-model="mbr.name"/></label>
+
+              <label class="item item-input">
+                  <input type="number" placeholder="Age" ng-model="mbr.age" > 
+               </label>
+               <div class="item item-divider">Blood Group </div>
+                 <ion-checkbox ng-repeat="item in bloodGrpsList" ng-model="item.checked" ng-change="selectBloodGrp(item.bloodGrp)">{{ item.bloodGrp }}
+                  </ion-checkbox>
+
+             <div class="item item-divider">Gender </div>
+      
+                  <ion-checkbox ng-repeat="item in genders" ng-model="item.checked" ng-change="selectGender(item.gender)">{{ item.gender }}
+                  </ion-checkbox> 
+
+             <div class="item item-divider"> Relationship to Subscriber:
+        </div>
+       <ion-checkbox ng-repeat="item in relations" ng-model="item.checked" ng-change="selectRelation(item.relation)">{{ item.relation }}
+          </ion-checkbox>
+
+      </div>
+    </div>
+    </form>
+    </ion-content>
+    </ion-view>
+  		

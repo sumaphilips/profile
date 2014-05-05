@@ -1,0 +1,48 @@
+<ion-header-bar align-title="center" class="bar-stable">
+   <h1 class="title">HealthNode</h1>
+  </ion-header-bar>
+
+ <ion-view title="logIn">
+  <ion-content class="has-header">
+ 
+
+<div class="list" >
+    <form name="auth_user" >
+      <div class="padding">
+        <div class="list-list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="User Name" ng-model="user.username" required>
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="Password" ng-model="user.password" required >
+          </label>
+        </div>  
+       <div class="text-align-center" align="center">
+          <button class="button button-block button-positive" type="submit" ng-click="authenticate(user)" >
+             Sign In </button>
+             </div>
+        <div class="wrapper">
+        <span> or </span>
+        </div>  
+            </div>
+              <div class="container">
+    <div class="btn-group" align-title="center" align="center"> 
+            <button class="button icon-center button-small ion-social-facebook button-positive" ng-click="serviceProviderLogin()"></button>
+             
+            <button class="button icon-center button-small ion-social-twitter button-calm" ></button>
+             
+            <button class="button icon-center button-small ion-social-googleplus button-assertive" > </button>
+  </div>
+        
+      </form>
+</div>
+</div> 
+<div class="text-align-center" align="center">
+<a href="#/register"> Sign Up </a>
+</div>
+<div class="text-align-center" align="center">
+<a href="#/fgtPassword" >Forgot Password</a>
+</div>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view title="BloodGroup">
+  <ion-content class="has-header">
+  <ion-nav-buttons side="left">
+ <a class="button button-clear"  ui-sref="profile" >Back
+        <i class="icon ion-ios7-arrow-back"></i></a>
+ </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+  <a class="button button-clear"  ui-sref="profile" >Done
+        <i class="icon"></i></a>
+
+</ion-nav-buttons>
+
+
+<ion-view>
+  <ion-content >
+
+    <div class="list">
+        
+      <div class="item item-divider"> 
+         Please choose your blood group:
+        </div>
+       <ion-checkbox ng-repeat="item in bloodGrpsList" ng-model="item.checked" ng-change="selectBloodGrp(item.bloodGrp)">{{ item.bloodGrp }}
+          </ion-checkbox>
+
+      </div>
+               
+</ion-content>
+</ion-view>

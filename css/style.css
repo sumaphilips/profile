@@ -1,0 +1,23 @@
+.wrapper {
+    overflow: hidden;
+    text-align: center;
+}
+.wrapper::before,
+.wrapper::after {
+    background-color:#d2d2d2;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+.wrapper::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.wrapper::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+

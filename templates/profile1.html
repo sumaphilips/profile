@@ -1,0 +1,117 @@
+<!-working file ---->
+ 
+<ion-view title="Profile" >
+ <ion-tabs class="tabs-positive tabs-icon-only">
+
+  <ion-tab title="Profile" icon-on="ion-ios7-information" icon-off="ion-ios7-information-outline">
+    
+  <ion-content has-header="true">
+  <div class="header" align="center">
+      <h4>Profile</h4>
+      </div>
+  
+     <div class="list-list-inset">
+     <label class="item item-input">
+            <input type="text" placeholder="Name" ng-model="firstname"/>
+       </label> <!-- name should be prepopulated from the register page-->
+  
+
+    <label class="item item-input">
+            <input type="number" placeholder="Age" ng-model="user.age" > <!-- age should be prepopulated from the register page-->
+         </label>
+
+      <div class="item item-divider"> 
+         Gender</div>
+  
+       <ion-checkbox ng-repeat="item in genders" ng-model="item.checked" ng-change="selectGender(item.gender)"> {{ item.gender }}
+          </ion-checkbox>
+
+
+ 
+      <div class="item item-divider">Blood Group </div>
+        <ion-checkbox ng-repeat="item in bloodGrpsList" ng-model="item.checked" ng-change="selectBloodGrp(item.bloodGrp)">{{ item.bloodGrp }}
+          </ion-checkbox>
+       
+        </div>
+        </ion-content>
+
+</ion-tab>
+
+
+  <ion-tab title="Insurance" icon-on="ion-ios7-pricetag" icon-off="ion-ios7-pricetag-outline">
+    <ion-content has-header="true">
+    <div class="header" align="center">
+        <h4>Insurance</h4>
+        </div>
+  
+           
+        <div class="padding">
+            <div class="list">
+           <label class="item item-input">
+              <div class="input-label">Holder Name</div>
+                    <input type="text" ng-model="insurance.holdername"/></label>
+           <label class="item item-input">
+               <div class="input-label">Insurance Name</div>
+                    <input type="text" ng-model="insurance.name"/></label>
+           <label class="item item-input">
+                <div class="input-label">Type</div>
+                    <input type="text"  ng-model="insurance.type" > </label>
+        
+            <label class="item item-input">
+                <div class="input-label">Policy ID</div>
+                    <input type="text"  ng-model="insurance.policy_id" ></label>
+        
+            <label class="item item-input">
+                 <div class="input-label">Group ID #</div>
+                    <input type="number"  ng-model="insurance.group_id" ></label>
+            <label class="item item-input">
+                  <div class="input-label">Subscriber Name</div> 
+                    <input type="text"  ng-model="insurance.subscriber_name" ></label>
+       
+   
+     
+              <div class="item item-divider"> Relationship to Subscriber</div>
+            <ion-checkbox ng-repeat="item in relations" ng-model="item.checked" ng-change="selectRelation(item.relation)">{{ item.relation }}
+            </ion-checkbox>
+           
+            </div>
+            </div>
+     </ion-content>
+    </ion-content>
+  </ion-tab>
+
+  <ion-tab title="Family Member" icon-on="ion-ios7-people" icon-off="ion-ios7-people-outline">
+   <ion-content has-header="true">
+   <div class="header" align="center">
+  <h4>Family Member</h4>
+  </div>
+    <div class="padding">
+          <div class="list">
+              <label class="item item-input">
+                  <input type="text" placeholder="Family Member" ng-model="mbr.name"/></label>
+
+              <label class="item item-input">
+                  <input type="number" placeholder="Age" ng-model="mbr.age" > 
+               </label>
+              <div class="item item-divider">Blood Group </div>
+                 <ion-checkbox ng-repeat="item in bloodGrpsList" ng-model="item.checked" ng-change="selectBloodGrp(item.bloodGrp)">{{ item.bloodGrp }}
+                  </ion-checkbox>
+
+              <div class="item item-divider">Gender </div>
+      
+                  <ion-checkbox ng-repeat="item in genders" ng-model="item.checked" ng-change="selectGender(item.gender)">{{ item.gender }}
+                  </ion-checkbox>
+
+            <div class="item item-divider"> Relationship to Subscriber:
+            </div>
+                  <ion-checkbox ng-repeat="item in relations" ng-model="item.checked"  ng-change="selectRelation(relation)">{{ item.relation }}
+                  </ion-checkbox>
+
+            </div>
+    </ion-content>
+  </ion-tab>
+
+</ion-tabs> 
+</ion-view> 
+  
+

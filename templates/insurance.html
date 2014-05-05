@@ -1,0 +1,19 @@
+ <ion-view title="Insurance">
+
+<div class="bar bar-subheader">
+    
+          <h1 class="title">Add Insurance</h1>
+    
+           <a class="button button-clear button-primary" href="#/tab/profile">Cancel</a>
+           <a class="button button-clear ion-android-add" href="#/tab/addInsurance/:profileId/:MbrId"></a>
+         
+        </div>
+<ion-content class="has-header padding">
+ <ion-list>
+            <ion-item ng-repeat="insurance in insurancelist" href="#/tab/addInsurance/:profileId/{{mbr.id}}">{{insurance.holdername}}</ion-item>
+          </ion-list>
+          </ion-content>
+
+
+</ion-view>
+
